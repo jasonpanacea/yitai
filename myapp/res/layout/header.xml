@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/header_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/deepskyblue"
+
+        >
+
+    <TextView
+            android:id="@+id/header_text"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="集团介绍"
+            >
+
+    </TextView>
+
+
+</RelativeLayout>
