@@ -5,5 +5,5 @@ package com.yitai.utils;
  */
 public class Constants {
     public static final int TITLE = 0;
-    public static final int CONTACT = 1;
+    public static final int CONTENT = 1;
 }

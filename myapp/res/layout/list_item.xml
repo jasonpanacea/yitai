@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"
+            android:ellipsize="none"
+            android:maxLines="10"
+            android:scrollHorizontally="false"
+            android:textColor="@color/black"
+            android:text="伊泰伊犁有限公司阿尔玛勒小煤窑整合区灾害治理项目招标公告书"
+            android:id="@+id/title"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_alignLeft="@+id/title"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            android:text="2014年7月5日"
+            android:id="@+id/subtitle"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/arrow2"/>
+</RelativeLayout>

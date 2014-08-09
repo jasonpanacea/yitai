@@ -15,8 +15,8 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.yitai.activity.R;
 import com.yitai.DO.ContactItem;
+import com.yitai.adapter.TitleViewHolder;
 import com.yitai.utils.Constants;
 import com.yitai.utils.DataFactory;
 
@@ -53,10 +53,7 @@ public class ContactActivity extends Activity {
         TextView tele_text;
     }
     
-    private class TitleViewHolder{
-        TextView title;
-        View line;
-    }
+
 
     private class ContactAdapter extends BaseAdapter{
         private Context context;
@@ -99,7 +96,7 @@ public class ContactActivity extends Activity {
             int type = getItemViewType(i);
             ContactItem contactItem = contactItems.get(i);
             if(view == null){
-                if (type == Constants.CONTACT) {
+                if (type == Constants.CONTENT) {
                     mContactViewHolder = new ContactViewHolder();
                     view = LayoutInflater.from(context).inflate(
                             R.layout.contact_content, null);
@@ -119,13 +116,13 @@ public class ContactActivity extends Activity {
                 }
             }
             else{
-                if (type == Constants.CONTACT)
+                if (type == Constants.CONTENT)
                     mContactViewHolder = (ContactViewHolder)view.getTag();
                 else
                     mTitleViewHolder = (TitleViewHolder)view.getTag();
             }
 
-            if (type == Constants.CONTACT) {
+            if (type == Constants.CONTENT) {
                 mContactViewHolder.name.setText(contactItem.getName());
                 mContactViewHolder.tele_text.setText(contactItem.getTele());
                 mContactViewHolder.addr_text.setText(contactItem.getAddr());
