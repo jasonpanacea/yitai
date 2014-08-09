@@ -1,5 +1,6 @@
 package com.yitai.adapter;
 
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -8,4 +9,5 @@ import android.widget.TextView;
 public class ViewHolder {
     public TextView title;
     public TextView subtitle;
+    public ImageView arrow;
 }

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 import com.yitai.DO.CommonListItem;
 import com.yitai.activity.R;
@@ -18,10 +19,12 @@ import java.util.ArrayList;
 public class CommonListAdapter extends BaseAdapter {
     private ArrayList<CommonListItem> commonListItems = new ArrayList<CommonListItem>();
     private Context context;
+    private boolean isShowArrow;
 
-    public CommonListAdapter(ArrayList<CommonListItem> commonListItems, Context context) {
+    public CommonListAdapter(ArrayList<CommonListItem> commonListItems, Context context, boolean isShowArrow) {
         this.commonListItems = commonListItems;
         this.context = context;
+        this.isShowArrow = isShowArrow;
     }
 
 
@@ -52,9 +55,10 @@ public class CommonListAdapter extends BaseAdapter {
             if (type == Constants.CONTENT) {
                 vh = new ViewHolder();
                 view = LayoutInflater.from(context).inflate(
-                        R.layout.contact_content, null);
+                        R.layout.list_item, null);
                 vh.title = (TextView) view.findViewById(R.id.title);
                 vh.subtitle = (TextView) view.findViewById(R.id.subtitle);
+                vh.arrow = (ImageView) view.findViewById(R.id.arrow);
                 view.setTag(vh);
             } else {
                 mTitleViewHolder = new TitleViewHolder();
@@ -74,6 +78,10 @@ public class CommonListAdapter extends BaseAdapter {
         if (type == Constants.CONTENT) {
             vh.title.setText(commonListItem.getTitle());
             vh.subtitle.setText(commonListItem.getSubtitle());
+            if (!this.isShowArrow)
+                vh.arrow.setVisibility(View.GONE);
+            else
+                vh.arrow.setVisibility(View.VISIBLE);
         } else {
             mTitleViewHolder.title.setText(commonListItem.getTitle());
 //                mTitleViewHolder.title.setBackgroundColor(contactItems.get(i).getColor());

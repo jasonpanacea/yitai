@@ -34,9 +34,7 @@ public class ContactActivity extends Activity {
         setContentView(R.layout.contact);
         TextView title = (TextView) findViewById(R.id.header_text);
         contactList = (ListView) findViewById(R.id.contact_list);
-        contactList.requestFocus();
         search = (EditText) findViewById(R.id.search);
-        search.clearFocus();
         RelativeLayout header = (RelativeLayout) findViewById(R.id.header_layout);
         header.setBackgroundColor(getResources().getColor(R.color.blueviolet));
         title.setText("联系方式");
@@ -145,7 +143,7 @@ public class ContactActivity extends Activity {
 
         @Override
         public boolean isEnabled(int position) {
-            return false;
+            return contactItems.get(position).getTag()==Constants.CONTENT;
         }
     }
 }
