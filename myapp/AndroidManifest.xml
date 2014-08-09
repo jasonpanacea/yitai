@@ -16,7 +16,7 @@
         <activity android:name="com.yitai.activity.IntroActivity" ></activity>
         <activity android:name="com.yitai.activity.ContactActivity" ></activity>
         <activity android:name="com.yitai.activity.TenderActivity" ></activity>
-
+        <activity android:name="com.yitai.activity.NewsActivity" ></activity>
 
     </application>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
