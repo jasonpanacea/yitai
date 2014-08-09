@@ -36,7 +36,7 @@ public class HomeActivity extends Activity {
                 R.drawable.p1, R.drawable.p1,
                 R.drawable.p1, R.drawable.p1, R.drawable.p1};
         texts = new String[]{"集团介绍", "联系方式",
-                "招标信息", "宫式布局4",
+                "招标信息", "公司新闻",
                 "宫式布局5", "宫式布局6",
                 "宫式布局7", "宫式布局8", "宫式布局9"};
         GridView gridview = (GridView) findViewById(R.id.gridview);
@@ -83,6 +83,9 @@ public class HomeActivity extends Activity {
 
                 case 2:
                     startActivity(new Intent(HomeActivity.this, TenderActivity.class));//启动另一个Activity
+                    break;
+                case 3:
+                    startActivity(new Intent(HomeActivity.this, NewsActivity.class));//启动另一个Activity
                     break;
             }
 
