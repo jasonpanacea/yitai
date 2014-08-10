@@ -21,6 +21,7 @@
         <activity android:name="com.yitai.activity.RecruitmentActivity" ></activity>
         <activity android:name="com.yitai.activity.CultureActivity" ></activity>
         <activity android:name="com.yitai.activity.ZhaopinActivity" ></activity>
+        <activity android:name="com.yitai.activity.ZhaobiaoActivity" ></activity>
 
     </application>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
