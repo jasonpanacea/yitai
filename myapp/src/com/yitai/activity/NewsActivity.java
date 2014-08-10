@@ -3,12 +3,9 @@ package com.yitai.activity;
 import com.yitai.activity.R;
 
 import android.app.Activity;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
-import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
