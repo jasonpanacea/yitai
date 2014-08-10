@@ -38,7 +38,7 @@ public class HomeActivity extends Activity {
         texts = new String[]{"集团介绍", "联系方式",
                 "招标信息", "公司新闻",
                 "产品中心", "人才招聘",
-                "宫式布局7", "宫式布局8", "宫式布局9"};
+                "企业文化", "宫式布局8", "宫式布局9"};
         GridView gridview = (GridView) findViewById(R.id.gridview);
         ArrayList<HashMap<String, Object>> lstImageItem = new ArrayList<HashMap<String, Object>>();
         for (int i = 0; i < 8; i++) {
@@ -92,6 +92,10 @@ public class HomeActivity extends Activity {
                     break;
                 case 5:
                     startActivity(new Intent(HomeActivity.this, RecruitmentActivity.class));//启动另一个Activity
+                    break;
+
+                case 6:
+                    startActivity(new Intent(HomeActivity.this, CultureActivity.class));//启动另一个Activity
                     break;
             }
 
