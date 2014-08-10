@@ -1,6 +1,7 @@
 package com.yitai.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -39,7 +40,7 @@ public class RecruitmentActivity extends Activity {
         recruittList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
+                startActivity(new Intent(RecruitmentActivity.this, ZhaopinActivity.class));
             }
         });
     }
