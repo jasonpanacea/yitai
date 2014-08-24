@@ -6,10 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.AdapterView;
-import android.widget.GridView;
-import android.widget.SimpleAdapter;
-import android.widget.Toast;
+import android.widget.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,10 +16,15 @@ import com.yitai.activity.R;
 /**
  * Created by FanJiaqi on 2014/8/4.
  */
-public class HomeActivity extends Activity {
+public class HomeActivity extends Activity implements View.OnClickListener {
 
-    private String texts[] = null;
-    private int images[] = null;
+    private Button intro;
+    private Button culture;
+    private Button news;
+    private Button tender;
+    private Button product;
+    private Button recruit;
+    private Button contact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,74 +33,50 @@ public class HomeActivity extends Activity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.home);
-        images = new int[]{R.drawable.p1, R.drawable.p1,
-                R.drawable.p1, R.drawable.p1,
-                R.drawable.p1, R.drawable.p1,
-                R.drawable.p1, R.drawable.p1, R.drawable.p1};
-        texts = new String[]{"集团介绍", "联系方式",
-                "招标信息", "公司新闻",
-                "产品中心", "人才招聘",
-                "企业文化", "宫式布局8"};
-        GridView gridview = (GridView) findViewById(R.id.gridview);
-        ArrayList<HashMap<String, Object>> lstImageItem = new ArrayList<HashMap<String, Object>>();
-        for (int i = 0; i < 8; i++) {
-            HashMap<String, Object> map = new HashMap<String, Object>();
-            map.put("itemImage", images[i]);
-            map.put("itemText", texts[i]);
-            lstImageItem.add(map);
-        }
 
-        SimpleAdapter saImageItems = new SimpleAdapter(this,
-                lstImageItem,// 数据源
-                R.layout.home_item,// 显示布局
-                new String[] { "itemImage", "itemText" },
-                new int[] { R.id.itemImage, R.id.itemText });
-        gridview.setAdapter(saImageItems);
-        gridview.setOnItemClickListener(new ItemClickListener());
+        intro = (Button) findViewById(R.id.intro);
+        culture = (Button) findViewById(R.id.culture);
+        news = (Button) findViewById(R.id.news);
+        tender = (Button) findViewById(R.id.tender);
+        product = (Button) findViewById(R.id.product);
+        recruit = (Button) findViewById(R.id.recruit);
+        contact = (Button) findViewById(R.id.contact);
+
+        intro.setOnClickListener(this);
+        culture.setOnClickListener(this);
+        news.setOnClickListener(this);
+        tender.setOnClickListener(this);
+        product.setOnClickListener(this);
+        recruit.setOnClickListener(this);
+        contact.setOnClickListener(this);
+
     }
 
-    class ItemClickListener implements AdapterView.OnItemClickListener {
-        /**
-         * 点击项时触发事件
-         *
-         * @param parent  发生点击动作的AdapterView
-         * @param view 在AdapterView中被点击的视图(它是由adapter提供的一个视图)。
-         * @param position 视图在adapter中的位置。
-         * @param rowid 被点击元素的行id。
-         */
-        public void onItemClick(AdapterView<?> parent, View view, int position, long rowid) {
-            HashMap<String, Object> item = (HashMap<String, Object>) parent.getItemAtPosition(position);
-            //获取数据源的属性值
-            String itemText=(String)item.get("itemText");
-            Toast.makeText(HomeActivity.this, itemText, Toast.LENGTH_LONG).show();
-
-            //根据图片进行相应的跳转
-            switch (position) {
-                case 0:
-                    startActivity(new Intent(HomeActivity.this, IntroActivity.class));//启动另一个Activity
-                    break;
-                case 1:
-                    startActivity(new Intent(HomeActivity.this, ContactActivity.class));//启动另一个Activity
-                    break;
-
-                case 2:
-                    startActivity(new Intent(HomeActivity.this, TenderActivity.class));//启动另一个Activity
-                    break;
-                case 3:
-                    startActivity(new Intent(HomeActivity.this, NewsActivity.class));//启动另一个Activity
-                    break;
-                case 4:
-                    startActivity(new Intent(HomeActivity.this, ProductActivity.class));//启动另一个Activity
-                    break;
-                case 5:
-                    startActivity(new Intent(HomeActivity.this, RecruitmentActivity.class));//启动另一个Activity
-                    break;
-
-                case 6:
-                    startActivity(new Intent(HomeActivity.this, CultureActivity.class));//启动另一个Activity
-                    break;
-            }
-
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.intro:
+                startActivity(new Intent(HomeActivity.this, IntroActivity.class));//启动另一个Activity
+                break;
+            case R.id.contact:
+                startActivity(new Intent(HomeActivity.this, ContactActivity.class));//启动另一个Activity
+                break;
+            case R.id.tender:
+                startActivity(new Intent(HomeActivity.this, TenderActivity.class));//启动另一个Activity
+                break;
+            case R.id.news:
+                startActivity(new Intent(HomeActivity.this, NewsActivity.class));//启动另一个Activity
+                break;
+            case R.id.product:
+                startActivity(new Intent(HomeActivity.this, ProductActivity.class));//启动另一个Activity
+                break;
+            case R.id.recruit:
+                startActivity(new Intent(HomeActivity.this, RecruitmentActivity.class));//启动另一个Activity
+                break;
+            case R.id.culture:
+                startActivity(new Intent(HomeActivity.this, CultureActivity.class));//启动另一个Activity
+                break;
         }
     }
+
 }

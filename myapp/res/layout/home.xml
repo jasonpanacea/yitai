@@ -7,26 +7,179 @@
 
 
     <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="230dp"
+            android:layout_height="210dp"
             android:id="@+id/logo"
-            android:src="@drawable/logo2"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/logo_mainstage"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             />
 
 
-    <GridView
-            android:id="@+id/gridview"
-            android:layout_below="@id/logo"
-            android:numColumns="3"
-            android:gravity="center"
-            android:verticalSpacing="10dp"
-            android:horizontalSpacing="10dp"
-            android:columnWidth="100dp"
+    <RelativeLayout
+            android:id="@+id/line1"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-    </GridView>
+            android:layout_height="100dp"
+            android:layout_below="@id/logo">
 
+        <Button
+                android:id="@+id/intro"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/intro_selector"/>
+        <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/intro"
+                android:layout_alignLeft="@id/intro"
+                android:gravity="center"
+                android:textColor="#00AA8D"
+                android:text="集团介绍"/>
+
+        <Button
+                android:id="@+id/culture"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/culture_selector"/>
+
+        <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/culture"
+                android:layout_alignLeft="@id/culture"
+                android:gravity="center"
+                android:textColor="#2494B1"
+                android:text="企业文化"/>
+    </RelativeLayout>
+
+    <View
+            android:layout_below="@id/line1"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerInParent="true"
+            android:background="#3A5978"/>
+
+
+    <RelativeLayout
+            android:id="@+id/line2"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/line1">
+
+        <Button
+                android:id="@+id/news"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/news_selector"/>
+
+        <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/news"
+                android:layout_alignLeft="@id/news"
+                android:gravity="center"
+                android:textColor="#644F8E"
+                android:text="公司新闻"/>
+
+        <Button
+                android:id="@+id/tender"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/tenders_selector"/>
+
+        <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tender"
+                android:layout_alignLeft="@id/tender"
+                android:gravity="center"
+                android:textColor="#B26264"
+                android:text="招标信息"/>
+
+        <Button
+                android:id="@+id/product"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/product_selector"/>
+
+        <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/product"
+                android:layout_alignLeft="@id/product"
+                android:gravity="center"
+                android:textColor="#BB7B56"
+                android:text="产品中心"/>
+    </RelativeLayout>
+
+    <View
+            android:layout_below="@id/line2"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerInParent="true"
+            android:background="#474678"/>
+
+
+    <RelativeLayout
+            android:id="@+id/line3"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/line2">
+
+        <Button
+                android:id="@+id/recruit"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/recruitment_selector"/>
+
+        <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recruit"
+                android:layout_alignLeft="@id/recruit"
+                android:gravity="center"
+                android:textColor="#5495CE"
+                android:text="人才招聘"/>
+
+        <Button
+                android:id="@+id/contact"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/contact_selector"/>
+
+        <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact"
+                android:layout_alignLeft="@id/contact"
+                android:gravity="center"
+                android:textColor="#2B55B7"
+                android:text="联系方式"/>
+    </RelativeLayout>
 
 </RelativeLayout>
