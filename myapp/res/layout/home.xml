@@ -7,8 +7,8 @@
 
 
     <ImageView
-            android:layout_width="230dp"
-            android:layout_height="210dp"
+            android:layout_width="200dp"
+            android:layout_height="190dp"
             android:id="@+id/logo"
             android:layout_marginTop="10dp"
             android:src="@drawable/logo_mainstage"
@@ -20,7 +20,9 @@
     <RelativeLayout
             android:id="@+id/line1"
             android:layout_width="fill_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="5dp"
             android:layout_below="@id/logo">
 
         <Button
@@ -29,14 +31,14 @@
                 android:layout_height="70dp"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="20dp"
-                android:layout_centerVertical="true"
-                android:src="@drawable/intro_selector"/>
+                android:background="@drawable/intro_selector"/>
         <TextView
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/intro"
                 android:layout_alignLeft="@id/intro"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
                 android:textColor="#00AA8D"
                 android:text="集团介绍"/>
 
@@ -44,9 +46,8 @@
                 android:id="@+id/culture"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/culture_selector"/>
+                android:background="@drawable/culture_selector"/>
 
         <TextView
                 android:layout_width="70dp"
@@ -54,12 +55,14 @@
                 android:layout_below="@id/culture"
                 android:layout_alignLeft="@id/culture"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
                 android:textColor="#2494B1"
                 android:text="企业文化"/>
     </RelativeLayout>
 
     <View
             android:layout_below="@id/line1"
+            android:layout_marginTop="5dp"
             android:layout_width="fill_parent"
             android:layout_height="0.5dp"
             android:layout_marginLeft="20dp"
@@ -71,8 +74,9 @@
     <RelativeLayout
             android:id="@+id/line2"
             android:layout_width="fill_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:paddingBottom="5dp"
             android:layout_below="@id/line1">
 
         <Button
@@ -81,8 +85,7 @@
                 android:layout_height="70dp"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="20dp"
-                android:layout_centerVertical="true"
-                android:src="@drawable/news_selector"/>
+                android:background="@drawable/news_selector"/>
 
         <TextView
                 android:layout_width="70dp"
@@ -91,15 +94,15 @@
                 android:layout_alignLeft="@id/news"
                 android:gravity="center"
                 android:textColor="#644F8E"
+                android:layout_marginTop="5dp"
                 android:text="公司新闻"/>
 
         <Button
                 android:id="@+id/tender"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/tenders_selector"/>
+                android:background="@drawable/tenders_selector"/>
 
         <TextView
                 android:layout_width="70dp"
@@ -108,16 +111,16 @@
                 android:layout_alignLeft="@id/tender"
                 android:gravity="center"
                 android:textColor="#B26264"
+                android:layout_marginTop="5dp"
                 android:text="招标信息"/>
 
         <Button
                 android:id="@+id/product"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="20dp"
-                android:src="@drawable/product_selector"/>
+                android:background="@drawable/product_selector"/>
 
         <TextView
                 android:layout_width="70dp"
@@ -126,12 +129,14 @@
                 android:layout_alignLeft="@id/product"
                 android:gravity="center"
                 android:textColor="#BB7B56"
+                android:layout_marginTop="5dp"
                 android:text="产品中心"/>
     </RelativeLayout>
 
     <View
             android:layout_below="@id/line2"
             android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
             android:layout_height="0.5dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
@@ -144,6 +149,7 @@
             android:layout_width="fill_parent"
             android:layout_height="100dp"
             android:layout_marginTop="20dp"
+            android:paddingBottom="5dp"
             android:layout_below="@id/line2">
 
         <Button
@@ -152,8 +158,7 @@
                 android:layout_height="70dp"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="20dp"
-                android:layout_centerVertical="true"
-                android:src="@drawable/recruitment_selector"/>
+                android:background="@drawable/recruitment_selector"/>
 
         <TextView
                 android:layout_width="70dp"
@@ -162,15 +167,15 @@
                 android:layout_alignLeft="@id/recruit"
                 android:gravity="center"
                 android:textColor="#5495CE"
+                android:layout_marginTop="5dp"
                 android:text="人才招聘"/>
 
         <Button
                 android:id="@+id/contact"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/contact_selector"/>
+                android:background="@drawable/contact_selector"/>
 
         <TextView
                 android:layout_width="70dp"
@@ -179,6 +184,7 @@
                 android:layout_alignLeft="@id/contact"
                 android:gravity="center"
                 android:textColor="#2B55B7"
+                android:layout_marginTop="5dp"
                 android:text="联系方式"/>
     </RelativeLayout>
 

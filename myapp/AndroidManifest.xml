@@ -4,7 +4,7 @@
           android:versionCode="1"
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="10"/>
-    <application android:label="@string/app_name" android:icon="@drawable/logo">
+    <application android:label="@string/app_name" android:icon="@drawable/logo_mainstage">
         <activity android:name="com.yitai.activity.LauncherActivity"
                   android:label="@string/app_name">
             <intent-filter>
@@ -21,7 +21,9 @@
         <activity android:name="com.yitai.activity.RecruitmentActivity" ></activity>
         <activity android:name="com.yitai.activity.CultureActivity" ></activity>
         <activity android:name="com.yitai.activity.ZhaopinActivity" ></activity>
-        <activity android:name="com.yitai.activity.ZhaobiaoActivity" ></activity>
+        <activity android:name="com.yitai.activity.ZhaobiaoActivity" />
+        <activity android:name=".PlayActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                android:screenOrientation="landscape" />
 
     </application>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />

@@ -1,5 +1,7 @@
 package com.yitai.activity;
 
+import android.content.Intent;
+import android.widget.ImageButton;
 import com.yitai.activity.R;
 
 import android.app.Activity;
@@ -28,6 +30,15 @@ public class IntroActivity extends Activity {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.setContentView(R.layout.intro);
+
+        ImageButton play = (ImageButton) findViewById(R.id.play);
+        play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(IntroActivity.this, PlayActivity.class));//启动另一个Activity
+            }
+        });
+
         webView = (WebView) findViewById(R.id.webView);
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -35,13 +46,7 @@ public class IntroActivity extends Activity {
         webView.requestFocus();
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
         webView.getSettings().setLoadWithOverviewMode(true);
-        String uri = "android.resource://" + getPackageName() + "/" + R.raw.clip;
-        VideoView vv = (VideoView)this.findViewById(R.id.vv);
-        MediaController mc = new MediaController(this);
-        mc.setAnchorView(vv);
-        vv.setMediaController(mc);
-        vv.setVideoURI(Uri.parse(uri));
-        vv.start();
+
         webSettings.setAllowFileAccess(true);
         webSettings.setPluginState(WebSettings.PluginState.ON);
         webView.loadUrl("file:///android_asset/www/demo.html");

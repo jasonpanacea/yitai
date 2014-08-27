@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
+    <color name="intro">#00AA8D</color><!--透明 -->
+    <color name="culture">#2494B1</color><!--透明 -->
+    <color name="news">#644F8E</color><!--透明 -->
+    <color name="tender">#B26264</color><!--透明 -->
+    <color name="product">#BB7B56</color><!--透明 -->
+    <color name="recruit">#5495CE</color><!--透明 -->
+    <color name="contact">#2B55B7</color><!--透明 -->
+
+
     <color name="transparent">#00000000</color><!--透明 -->
     <color name="semi_transparent">#e0000000</color><!--半透明 -->
     <color name="white">#FFFFFF</color><!--白色 -->

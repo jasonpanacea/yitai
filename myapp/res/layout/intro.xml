@@ -5,16 +5,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-    <include android:id="@+id/include" layout="@layout/header"></include>
+    <include android:id="@+id/include" layout="@layout/header"/>
 
-<VideoView
-        android:id="@+id/vv"
-        android:layout_below="@id/include"
-        android:layout_width="fill_parent"
-        android:layout_height="100dp"/>
+
+    <RelativeLayout
+            android:id="@+id/video"
+            android:layout_below="@id/include"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="false"
+                android:background="@drawable/intro"/>
+
+        <ImageButton
+                android:id="@+id/play"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/playicon"/>
+
+            </RelativeLayout>
+
+
 
     <WebView
-            android:layout_below="@id/vv"
+            android:layout_below="@id/video"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_marginTop="20dp"

@@ -9,4 +9,5 @@
             android:state_pressed="true"
             android:drawable="@drawable/intro_sel">
     </item>
+
 </selector>
