@@ -35,8 +35,6 @@ public class ContactActivity extends Activity {
         TextView title = (TextView) findViewById(R.id.header_text);
         contactList = (ListView) findViewById(R.id.contact_list);
         search = (EditText) findViewById(R.id.search);
-        RelativeLayout header = (RelativeLayout) findViewById(R.id.header_layout);
-        header.setBackgroundColor(getResources().getColor(R.color.blueviolet));
         title.setText("联系方式");
         ArrayList<ContactItem> contactItems = DataFactory.getContactData();
         ContactAdapter ca = new ContactAdapter(this,contactItems);

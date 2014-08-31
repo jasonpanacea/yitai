@@ -16,14 +16,21 @@
             android:layout_centerHorizontal="true"
             />
 
+<ScrollView
+        android:layout_below="@id/logo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
 
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
     <RelativeLayout
             android:id="@+id/line1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:paddingBottom="5dp"
-            android:layout_below="@id/logo">
+            >
 
         <Button
                 android:id="@+id/intro"
@@ -69,8 +76,6 @@
             android:layout_marginRight="20dp"
             android:layout_centerInParent="true"
             android:background="#3A5978"/>
-
-
     <RelativeLayout
             android:id="@+id/line2"
             android:layout_width="fill_parent"
@@ -142,8 +147,6 @@
             android:layout_marginRight="20dp"
             android:layout_centerInParent="true"
             android:background="#474678"/>
-
-
     <RelativeLayout
             android:id="@+id/line3"
             android:layout_width="fill_parent"
@@ -187,5 +190,6 @@
                 android:layout_marginTop="5dp"
                 android:text="联系方式"/>
     </RelativeLayout>
-
+    </RelativeLayout>
+</ScrollView>
 </RelativeLayout>

@@ -7,6 +7,6 @@
     </item>
     <item
             android:state_pressed="true"
-            android:drawable="@drawable/contact_sel">
+            android:drawable="@drawable/culture_sel">
     </item>
 </selector>

@@ -5,10 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
-import android.widget.AdapterView;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.TextView;
+import android.widget.*;
 import com.yitai.DO.CommonListItem;
 import com.yitai.adapter.CommonListAdapter;
 import com.yitai.utils.DataFactory;
@@ -28,6 +25,8 @@ public class RecruitmentActivity extends Activity {
 
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.tender);
+        RelativeLayout header_layout = (RelativeLayout) findViewById(R.id.header_layout);
+        header_layout.setBackgroundColor(getResources().getColor(R.color.recruit));
         TextView header_text = (TextView) findViewById(R.id.header_text);
         header_text.setText("人才招聘");
         recruittList = (ListView) findViewById(R.id.list);

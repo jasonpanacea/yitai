@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.yitai.DO.CommonListItem;
 import com.yitai.adapter.CommonListAdapter;
@@ -24,6 +25,8 @@ public class ProductActivity extends Activity {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.tender);
+        RelativeLayout header_layout = (RelativeLayout) findViewById(R.id.header_layout);
+        header_layout.setBackgroundColor(getResources().getColor(R.color.product));
         producttList = (ListView) findViewById(R.id.list);
         TextView header_text = (TextView) findViewById(R.id.header_text);
         header_text.setText("产品中心");
