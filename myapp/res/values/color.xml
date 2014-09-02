@@ -8,6 +8,17 @@
     <color name="recruit">#5495CE</color><!--透明 -->
     <color name="contact">#2B55B7</color><!--透明 -->
 
+    <color name="round1">#736ED4</color>
+    <color name="round2">#D0798A</color>
+    <color name="round3">#FF935D</color>
+    <color name="round4">#51BCCE</color>
+    <color name="round5">#FF746F</color>
+    <color name="round6">#79B6FF</color>
+    <color name="round7">#55AE7A</color>
+    <color name="round8">#BD7B4E</color>
+    <color name="round9">#D38383</color>
+    <color name="round10">#5D458D</color>
+    <color name="round11">#9CB7CE</color>
 
     <color name="transparent">#00000000</color><!--透明 -->
     <color name="semi_transparent">#e0000000</color><!--半透明 -->

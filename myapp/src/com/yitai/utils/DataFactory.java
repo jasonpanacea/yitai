@@ -120,4 +120,30 @@ public class DataFactory {
         commonListItems.add(commonListItem);
         return commonListItems;
     }
+
+
+    public static ArrayList<CommonListItem> getNewsListData(){
+        ArrayList<CommonListItem> commonListItems = new ArrayList<CommonListItem>();
+        CommonListItem commonListItem = new CommonListItem("7月",Constants.TITLE);
+        commonListItems.add(commonListItem);
+        commonListItem = new CommonListItem("伊泰集团举办安全生产知识竞赛","发布时间：2014年7月5日——2014年8月1日",Constants.CONTENT);
+        commonListItems.add(commonListItem);
+        commonListItem = new CommonListItem("成都伊泰天骄项目亚洲人居环境颁奖和...","发布时间：2014年7月5日——2014年8月1日",Constants.CONTENT);
+        commonListItems.add(commonListItem);
+
+        commonListItem = new CommonListItem("6月",Constants.TITLE);
+        commonListItems.add(commonListItem);
+        commonListItem = new CommonListItem("中煤平朔集团党委书记刘勇一行来伊泰考察调研","发布时间：2014年7月5日——2014年8月1日",Constants.CONTENT);
+        commonListItems.add(commonListItem);
+        commonListItem = new CommonListItem("伊泰集团召开2013年度企业文化建设表彰大会","发布时间：2014年7月5日——2014年8月1日",Constants.CONTENT);
+        commonListItems.add(commonListItem);
+
+        commonListItem = new CommonListItem("5月",Constants.TITLE);
+        commonListItems.add(commonListItem);
+        commonListItem = new CommonListItem("中央第二巡回督导组杨衍银到伊泰大地精煤矿调研指导","发布时间：2014年7月5日——2014年8月1日",Constants.CONTENT);
+        commonListItems.add(commonListItem);
+        commonListItem = new CommonListItem("4000吨级大型干粉煤气化炉开工会举行","发布时间：2014年7月5日——2014年8月1日",Constants.CONTENT);
+        commonListItems.add(commonListItem);
+        return commonListItems;
+    }
 }

@@ -13,12 +13,11 @@ import com.yitai.utils.DataFactory;
 import java.util.ArrayList;
 
 /**
- * Created by FanJiaqi on 2014/8/9.
+ * Created by FanJiaqi on 2014/9/2.
  */
-public class RecruitmentActivity extends Activity {
+public class NewItemsActivity extends Activity {
     private ListView recruittList;
     private EditText search;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,22 +25,23 @@ public class RecruitmentActivity extends Activity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.tender);
         ImageView imageView = (ImageView) findViewById(R.id.bg);
-        imageView.setBackgroundResource(R.drawable.recruitment_pic);
+        imageView.setBackgroundResource(R.drawable.news_pic);
         RelativeLayout header_layout = (RelativeLayout) findViewById(R.id.header_layout);
-        header_layout.setBackgroundColor(getResources().getColor(R.color.recruit));
+        header_layout.setBackgroundColor(getResources().getColor(R.color.news));
         TextView header_text = (TextView) findViewById(R.id.header_text);
-        header_text.setText("人才招聘");
+        header_text.setText("公司新闻");
         recruittList = (ListView) findViewById(R.id.list);
         search = (EditText) findViewById(R.id.search_edit);
-        search.setHint("  搜索职位");
-        ArrayList<CommonListItem> commonListItems = DataFactory.getRecruitListData();
-        CommonListAdapter commonListAdapter = new CommonListAdapter(commonListItems, RecruitmentActivity.this, true);
+        search.setVisibility(View.GONE);
+
+        ArrayList<CommonListItem> commonListItems = DataFactory.getNewsListData();
+        CommonListAdapter commonListAdapter = new CommonListAdapter(commonListItems, NewItemsActivity.this, true);
         recruittList.setAdapter(commonListAdapter);
 
         recruittList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                startActivity(new Intent(RecruitmentActivity.this, ZhaopinActivity.class));
+                startActivity(new Intent(NewItemsActivity.this, NewsActivity.class));
             }
         });
     }

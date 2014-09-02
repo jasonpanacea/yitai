@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.yitai.DO.CommonListItem;
 import com.yitai.activity.R;
 import com.yitai.utils.Constants;
+import com.yitai.utils.Utils;
 
 import java.util.ArrayList;
 
@@ -84,7 +85,7 @@ public class CommonListAdapter extends BaseAdapter {
                 vh.arrow.setVisibility(View.VISIBLE);
         } else {
             mTitleViewHolder.title.setText(commonListItem.getTitle());
-//                mTitleViewHolder.title.setBackgroundColor(contactItems.get(i).getColor());
+            mTitleViewHolder.title.setBackgroundColor(Utils.getRandomColor());
 //                mTitleViewHolder.line.setBackgroundColor(contactItems.get(i).getColor());
         }
 
