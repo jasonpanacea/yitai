@@ -53,6 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
+                android:textColor="#ff64758d"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="60dp"
                 android:text="理念概述"/>
@@ -62,6 +63,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
+                android:textColor="#ff64758d"
                 android:layout_centerHorizontal="true"
                 android:layout_alignTop="@id/tv1"
                 android:text="八字箴言"/>
@@ -71,9 +73,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
+                android:textColor="#ff64758d"
                 android:layout_marginRight="20dp"
                 android:layout_alignParentRight="true"
                 android:layout_alignTop="@id/tv1"
+                android:text="精神要素"/>
+
+        <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#ff64758d"
+                android:layout_marginTop="20dp"
+                android:layout_alignLeft="@id/tv1"
+                android:layout_below="@id/tv1"
+                android:text="行为要素"/>
+
+        <TextView
+                android:id="@+id/tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#ff64758d"
+                android:layout_marginTop="20dp"
+                android:layout_alignLeft="@id/tv2"
+                android:layout_below="@id/tv2"
                 android:text="环境要素"/>
 
         <View
@@ -94,14 +119,13 @@
             android:layout_width="wrap_content"
             android:textColor="@color/gray"
             android:text="理念发展"
-            android:layout_height="wrap_content"/>
+            android:layout_height="40dp"/>
 
     <WebView
             android:layout_below="@id/tvs"
-
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="45dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:background="@drawable/corner"

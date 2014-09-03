@@ -13,7 +13,7 @@ public class DataFactory {
 
     public static ArrayList<ContactItem> getContactData(){
         ArrayList<ContactItem> contactItems = new ArrayList<ContactItem>();
-        ContactItem contactItem = new ContactItem(Constants.TITLE,"成都", R.color.darkgreen);
+        ContactItem contactItem = new ContactItem(Constants.TITLE,"内蒙");
         contactItems.add(contactItem);
         contactItem = new ContactItem(Constants.CONTENT,"伊泰煤炭股份有限公司", "+86-477-8565688", "成都市青羊区温家街188号A107楼","0477-1234567");
         contactItems.add(contactItem);
@@ -22,13 +22,14 @@ public class DataFactory {
         contactItem = new ContactItem(Constants.CONTENT,"伊泰煤炭股份有限公司", "+86-477-8565688", "成都市青羊区温家街188号A107楼","0477-1234567");
         contactItems.add(contactItem);
 
-        contactItem = new ContactItem(Constants.TITLE,"内蒙", R.color.darkorange);
+        contactItem = new ContactItem(Constants.TITLE,"成都");
         contactItems.add(contactItem);
         contactItem = new ContactItem(Constants.CONTENT,"伊泰煤炭股份有限公司", "+86-477-8565688", "成都市青羊区温家街188号A107楼","0477-1234567");
         contactItems.add(contactItem);
-        contactItem = new ContactItem(Constants.CONTENT,"伊泰煤炭股份有限公司", "+86-477-8565688", "成都市青羊区温家街188号A107楼","0477-1234567");
+
+        contactItem = new ContactItem(Constants.TITLE,"海南");
         contactItems.add(contactItem);
-        contactItem = new ContactItem(Constants.CONTENT,"伊泰煤炭股份有限公司", "+86-477-8565688", "成都市青羊区温家街188号A107楼","0477-1234567");
+        contactItem = new ContactItem(Constants.CONTENT,"海南伊泰置业有限责任公司", "+86-477-8565688", "海南省海口市文化路13号星历国际大厦","0477-1234567");
         contactItems.add(contactItem);
         return contactItems;
     }

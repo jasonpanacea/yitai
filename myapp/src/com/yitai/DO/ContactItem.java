@@ -10,12 +10,12 @@ public class ContactItem {
     String tele;
     String addr;
     String mailcode;
-    int color;
 
-    public ContactItem(int tag, String title, int color) {
+
+    public ContactItem(int tag, String title) {
         this.tag = tag;
         this.title = title;
-        this.color = color;
+
     }
 
     public ContactItem(int tag, String name, String tele, String addr, String mailcode) {
@@ -74,12 +74,6 @@ public class ContactItem {
         this.title = title;
     }
 
-    public int getColor() {
-        return color;
-    }
 
-    public void setColor(int color) {
-        this.color = color;
-    }
 
 }
