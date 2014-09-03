@@ -8,6 +8,6 @@ import com.yitai.activity.R;
 public class Constants {
     public static final int TITLE = 0;
     public static final int CONTENT = 1;
-    public static final int[] ROUND_COLORS = {R.color.round1, R.color.round2, R.color.round3, R.color.round4,
-            R.color.round5, R.color.round6, R.color.round7, R.color.round8, R.color.round9, R.color.round10, R.color.round11};
+    public static final int[] ROUND_RIBBONS = {R.layout.ribbon1, R.layout.ribbon2, R.layout.ribbon3, R.layout.ribbon4,
+            R.layout.ribbon5, R.layout.ribbon6, R.layout.ribbon7, R.layout.ribbon8, R.layout.ribbon9, R.layout.ribbon10, R.layout.ribbon11};
 }

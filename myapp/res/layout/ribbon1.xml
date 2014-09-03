@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+    <View
+            android:id="@+id/line"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_centerInParent="true"
+            android:background="@color/round1"/>
+
+<TextView
+        android:id="@+id/circle"
+        android:background="@drawable/round"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:text="内蒙"
+        android:clickable="false"
+        android:layout_width="80dp"
+        android:layout_height="80dp"/>
+
+
+</RelativeLayout>

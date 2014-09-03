@@ -19,6 +19,7 @@ import com.yitai.DO.ContactItem;
 import com.yitai.adapter.TitleViewHolder;
 import com.yitai.utils.Constants;
 import com.yitai.utils.DataFactory;
+import com.yitai.utils.Utils;
 
 /**
  * Created by FanJiaqi on 2014/8/6.
@@ -105,7 +106,7 @@ public class ContactActivity extends Activity {
                 else{
                     mTitleViewHolder = new TitleViewHolder();
                     view = LayoutInflater.from(context).inflate(
-                            R.layout.ribbon, null);
+                            Utils.getRandomRibbon(), null);
                     mTitleViewHolder.line = view.findViewById(R.id.line);
                     mTitleViewHolder.title = (TextView) view.findViewById(R.id.circle);
                     view.setTag(mTitleViewHolder);
@@ -126,8 +127,6 @@ public class ContactActivity extends Activity {
             }
             else{
                 mTitleViewHolder.title.setText(contactItem.getTitle());
-//                mTitleViewHolder.title.setBackgroundColor(contactItems.get(i).getColor());
-//                mTitleViewHolder.line.setBackgroundColor(contactItems.get(i).getColor());
             }
 
             return view;

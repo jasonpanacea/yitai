@@ -38,19 +38,20 @@
             android:layout_width="fill_parent"
             android:layout_height="200dp"
             android:layout_below="@id/header_layout"
-            android:layout_marginTop="-10dp"
             android:background="@drawable/tenders_pic"/>
 
-    <EditText
-            android:layout_width="220dp"
-            android:layout_height="40dp"
-            android:background="@drawable/search_eidt"
-            android:layout_alignTop="@+id/bg"
-            android:id="@+id/search_edit"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="20dp"
-            android:hint=" 搜索招标信息"
-            android:layout_marginTop="60dp"/>
+
+
+        <EditText
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:background="@drawable/search_eidt"
+                android:layout_alignTop="@+id/bg"
+                android:id="@+id/search_edit"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="50dp"
+                android:hint=" 搜索招标信息"
+                android:layout_marginTop="60dp"/>
 
     <Button
             android:id="@+id/search_btn"
@@ -59,6 +60,7 @@
             android:background="@drawable/search_button_selector"
             android:layout_alignTop="@id/search_edit"
             android:layout_toRightOf="@id/search_edit"/>
+
 
     <ListView
             android:id="@+id/list"

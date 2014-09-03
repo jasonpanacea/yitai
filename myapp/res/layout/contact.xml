@@ -38,7 +38,6 @@
             android:layout_width="fill_parent"
             android:layout_height="200dp"
             android:layout_below="@id/header_layout"
-            android:layout_marginTop="-10dp"
             android:background="@drawable/contact_pic"/>
 
     <EditText
@@ -48,7 +47,7 @@
             android:layout_alignTop="@+id/bg"
             android:id="@+id/search_edit"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="50dp"
             android:hint=" 搜索联系方式"
             android:layout_marginTop="60dp"/>
 

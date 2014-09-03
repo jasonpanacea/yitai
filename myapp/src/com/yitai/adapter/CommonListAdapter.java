@@ -1,6 +1,7 @@
 package com.yitai.adapter;
 
 import android.content.Context;
+import android.graphics.drawable.GradientDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,7 +65,7 @@ public class CommonListAdapter extends BaseAdapter {
             } else {
                 mTitleViewHolder = new TitleViewHolder();
                 view = LayoutInflater.from(context).inflate(
-                        R.layout.ribbon, null);
+                        Utils.getRandomRibbon(), null);
                 mTitleViewHolder.line = view.findViewById(R.id.line);
                 mTitleViewHolder.title = (TextView) view.findViewById(R.id.circle);
                 view.setTag(mTitleViewHolder);
@@ -85,8 +86,7 @@ public class CommonListAdapter extends BaseAdapter {
                 vh.arrow.setVisibility(View.VISIBLE);
         } else {
             mTitleViewHolder.title.setText(commonListItem.getTitle());
-            mTitleViewHolder.title.setBackgroundColor(Utils.getRandomColor());
-//                mTitleViewHolder.line.setBackgroundColor(contactItems.get(i).getColor());
+
         }
 
         return view;
