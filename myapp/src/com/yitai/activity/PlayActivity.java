@@ -18,7 +18,7 @@ public class PlayActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.play_layout);
-        String uri = "android.resource://" + getPackageName() + "/" + R.raw.clip;
+        String uri = "android.resource://" + getPackageName() + "/" ;
         VideoView vv = (VideoView)this.findViewById(R.id.vv);
         MediaController mc = new MediaController(this);
         mc.setAnchorView(vv);

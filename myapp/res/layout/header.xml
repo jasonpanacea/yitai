@@ -16,7 +16,7 @@
             android:textSize="20sp"
             android:gravity="center"
             android:textStyle="bold"
-            android:text="集团介绍"
+            android:text="公司介绍"
             >
 
     </TextView>

@@ -1,138 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--禁止edittext自动获取焦点-->
+<!-- 禁止edittext自动获取焦点 -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:background="@color/white"
-                android:layout_height="match_parent"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-        >
-
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
 
     <RelativeLayout
-            android:id="@+id/header_layout"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/culture"
-            >
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/culture" >
 
         <TextView
-                android:id="@+id/header_text"
-                android:layout_width="fill_parent" android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:layout_centerVertical="true"
-                android:textSize="20sp"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:text="企业文化"
-                >
+            android:id="@+id/header_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="企业文化"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" >
         </TextView>
-
     </RelativeLayout>
 
     <ImageView
-            android:id="@+id/bg"
-            android:layout_width="fill_parent"
-            android:layout_height="200dp"
-            android:layout_below="@id/header_layout"
-            android:layout_marginTop="-10dp"
-            android:src="@drawable/bg"/>
-
-
-    <RelativeLayout
-            android:id="@+id/tvs"
-            android:visibility="gone"
-            android:layout_width="match_parent"
-            android:layout_below="@id/bg"
-            android:layout_height="150dp"
-            android:background="@color/darkblue"
-            >
-
-        <TextView
-                android:id="@+id/tv1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textColor="#ff64758d"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="60dp"
-                android:text="理念概述"/>
-
-        <TextView
-                android:id="@+id/tv2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textColor="#ff64758d"
-                android:layout_centerHorizontal="true"
-                android:layout_alignTop="@id/tv1"
-                android:text="八字箴言"/>
-
-        <TextView
-                android:id="@+id/tv3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textColor="#ff64758d"
-                android:layout_marginRight="20dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignTop="@id/tv1"
-                android:text="精神要素"/>
-
-        <TextView
-                android:id="@+id/tv4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textColor="#ff64758d"
-                android:layout_marginTop="20dp"
-                android:layout_alignLeft="@id/tv1"
-                android:layout_below="@id/tv1"
-                android:text="行为要素"/>
-
-        <TextView
-                android:id="@+id/tv5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textColor="#ff64758d"
-                android:layout_marginTop="20dp"
-                android:layout_alignLeft="@id/tv2"
-                android:layout_below="@id/tv2"
-                android:text="环境要素"/>
-
-        <View
-                android:id="@+id/line"
-                android:layout_width="fill_parent"
-                android:layout_height="2dp"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="10dp"
-                android:layout_below="@id/tv1"
-                android:background="@drawable/shape_line"/>
-            </RelativeLayout>
-
-    <CheckBox
-            android:id="@+id/ckb"
-            android:layout_below="@id/bg"
-            android:checked="false"
-            android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
-            android:textColor="@color/gray"
-            android:text="理念发展"
-            android:layout_height="40dp"/>
+        android:id="@+id/bg"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/header_layout"
+        android:layout_marginTop="-10dp"
+        android:src="@drawable/culture" />
 
     <WebView
-            android:layout_below="@id/tvs"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginTop="45dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/corner"
-            android:id="@+id/webView"
-            />
+        android:id="@+id/webView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/bg"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/corner" />
 
+    
+        <Button
+        android:id="@+id/rb1"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/header_layout"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="理念概述"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+    
+    <Button
+        android:id="@+id/rb2"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/rb1"
+        android:text="环境要素"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
 
+    <Button
+        android:id="@+id/rb3"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/rb1"
+        android:layout_toRightOf="@id/rb1"
+        android:layout_marginLeft="30dp"
+        android:text="精神要素"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
 
+    <Button
+        android:id="@+id/rb4"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rb2"
+        android:layout_alignBottom="@+id/rb2"
+        android:layout_alignLeft="@+id/rb3"
+        android:text="八字箴言"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+    
+        <Button
+        android:id="@+id/rb5"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/rb1"
+        android:layout_toRightOf="@id/rb3"
+        android:layout_marginLeft="30dp"
+        android:text="行为要素"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/rb6"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rb4"
+        android:layout_alignBottom="@+id/rb4"
+        android:layout_alignLeft="@+id/rb5"
+        android:text="大事记"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
 
 </RelativeLayout>
