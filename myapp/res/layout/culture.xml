@@ -30,8 +30,8 @@
         android:id="@+id/bg"
         android:layout_width="fill_parent"
         android:layout_height="200dp"
-        android:layout_below="@id/header_layout"
-        android:layout_marginTop="-10dp"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/header_layout"
         android:src="@drawable/culture" />
 
     <WebView
@@ -39,76 +39,10 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_below="@+id/bg"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:background="@drawable/corner" />
 
     
-        <Button
-        android:id="@+id/rb1"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/header_layout"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:text="理念概述"
-        android:textColor="@color/black"
-        android:textSize="12sp" />
-    
-    <Button
-        android:id="@+id/rb2"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_below="@id/rb1"
-        android:text="环境要素"
-        android:textColor="@color/black"
-        android:textSize="12sp" />
-
-    <Button
-        android:id="@+id/rb3"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/rb1"
-        android:layout_toRightOf="@id/rb1"
-        android:layout_marginLeft="30dp"
-        android:text="精神要素"
-        android:textColor="@color/black"
-        android:textSize="12sp" />
-
-    <Button
-        android:id="@+id/rb4"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/rb2"
-        android:layout_alignBottom="@+id/rb2"
-        android:layout_alignLeft="@+id/rb3"
-        android:text="八字箴言"
-        android:textColor="@color/black"
-        android:textSize="12sp" />
-    
-        <Button
-        android:id="@+id/rb5"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/rb1"
-        android:layout_toRightOf="@id/rb3"
-        android:layout_marginLeft="30dp"
-        android:text="行为要素"
-        android:textColor="@color/black"
-        android:textSize="12sp" />
-
-    <Button
-        android:id="@+id/rb6"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/rb4"
-        android:layout_alignBottom="@+id/rb4"
-        android:layout_alignLeft="@+id/rb5"
-        android:text="大事记"
-        android:textColor="@color/black"
-        android:textSize="12sp" />
 
 </RelativeLayout>
