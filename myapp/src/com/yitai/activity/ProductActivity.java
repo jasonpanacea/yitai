@@ -15,7 +15,6 @@ import java.util.ArrayList;
  */
 public class ProductActivity extends Activity {
     private ListView producttList;
-    private EditText search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +28,6 @@ public class ProductActivity extends Activity {
         producttList = (ListView) findViewById(R.id.list);
         TextView header_text = (TextView) findViewById(R.id.header_text);
         header_text.setText("产品中心");
-        search = (EditText) findViewById(R.id.search_edit);
-        search.setHint("  搜索产品");
         ArrayList<CommonListItem> commonListItems = DataFactory.getProductData();
         CommonListAdapter commonListAdapter = new CommonListAdapter(commonListItems, ProductActivity.this, false);
         producttList.setAdapter(commonListAdapter);

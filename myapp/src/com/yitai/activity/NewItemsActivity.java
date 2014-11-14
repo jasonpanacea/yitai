@@ -17,8 +17,7 @@ import java.util.ArrayList;
  */
 public class NewItemsActivity extends Activity {
     private ListView recruittList;
-    private EditText search;
-    private Button search_btn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,10 +31,7 @@ public class NewItemsActivity extends Activity {
         TextView header_text = (TextView) findViewById(R.id.header_text);
         header_text.setText("公司新闻");
         recruittList = (ListView) findViewById(R.id.list);
-        search = (EditText) findViewById(R.id.search_edit);
-        search.setVisibility(View.GONE);
-        search_btn = (Button) findViewById(R.id.search_btn);
-        search_btn.setVisibility(View.GONE);
+
 
         ArrayList<CommonListItem> commonListItems = DataFactory.getNewsListData();
         CommonListAdapter commonListAdapter = new CommonListAdapter(commonListItems, NewItemsActivity.this, true);

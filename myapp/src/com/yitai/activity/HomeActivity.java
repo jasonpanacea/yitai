@@ -62,7 +62,7 @@ public class HomeActivity extends Activity implements View.OnClickListener {
                 startActivity(new Intent(HomeActivity.this, ContactActivity.class));//启动另一个Activity
                 break;
             case R.id.tender:
-                startActivity(new Intent(HomeActivity.this, TenderActivity.class));//启动另一个Activity
+                startActivity(new Intent(HomeActivity.this, ZhaobiaoActivity.class));//启动另一个Activity
                 break;
             case R.id.news:
                 startActivity(new Intent(HomeActivity.this, NewItemsActivity.class));//启动另一个Activity

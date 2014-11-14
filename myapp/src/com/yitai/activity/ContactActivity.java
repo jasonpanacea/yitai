@@ -26,7 +26,6 @@ import com.yitai.utils.Utils;
  */
 public class ContactActivity extends Activity {
     private ListView contactList;
-    private EditText search;
     private ArrayList<ContactItem> contactItems = new ArrayList<ContactItem>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +34,7 @@ public class ContactActivity extends Activity {
         setContentView(R.layout.contact);
         TextView title = (TextView) findViewById(R.id.header_text);
         contactList = (ListView) findViewById(R.id.contact_list);
-        search = (EditText) findViewById(R.id.search_edit);
+
         title.setText("联系方式");
         ArrayList<ContactItem> contactItems = DataFactory.getContactData();
         ContactAdapter ca = new ContactAdapter(this,contactItems);

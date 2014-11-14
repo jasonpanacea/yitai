@@ -18,7 +18,7 @@ import java.util.ArrayList;
  */
 public class TenderActivity extends Activity {
     private ListView tendertList;
-    private EditText search;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,6 @@ public class TenderActivity extends Activity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.tender);
         tendertList = (ListView) findViewById(R.id.list);
-        search = (EditText) findViewById(R.id.search_edit);
         ArrayList<CommonListItem> commonListItems = DataFactory.getCommonListData();
         CommonListAdapter commonListAdapter = new CommonListAdapter(commonListItems, TenderActivity.this, true);
         tendertList.setAdapter(commonListAdapter);

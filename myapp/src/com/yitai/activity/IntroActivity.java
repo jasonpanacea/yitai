@@ -31,13 +31,6 @@ public class IntroActivity extends Activity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.setContentView(R.layout.intro);
 
-        ImageButton play = (ImageButton) findViewById(R.id.play);
-        play.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(IntroActivity.this, PlayActivity.class));//启动另一个Activity
-            }
-        });
 
         webView = (WebView) findViewById(R.id.webView);
         WebSettings webSettings = webView.getSettings();

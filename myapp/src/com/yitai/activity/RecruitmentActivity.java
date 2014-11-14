@@ -17,7 +17,6 @@ import java.util.ArrayList;
  */
 public class RecruitmentActivity extends Activity {
     private ListView recruittList;
-    private EditText search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +31,7 @@ public class RecruitmentActivity extends Activity {
         TextView header_text = (TextView) findViewById(R.id.header_text);
         header_text.setText("人才招聘");
         recruittList = (ListView) findViewById(R.id.list);
-        search = (EditText) findViewById(R.id.search_edit);
-        search.setHint("  搜索职位");
+
         ArrayList<CommonListItem> commonListItems = DataFactory.getRecruitListData();
         CommonListAdapter commonListAdapter = new CommonListAdapter(commonListItems, RecruitmentActivity.this, true);
         recruittList.setAdapter(commonListAdapter);
