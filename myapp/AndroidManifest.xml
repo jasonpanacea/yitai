@@ -28,7 +28,8 @@
         <activity android:name="com.yitai.activity.RecruitmentActivity"/>
         <activity android:name="com.yitai.activity.CultureActivity"/>
         <activity android:name="com.yitai.activity.ZhaopinActivity"/>
-        <activity android:name="com.yitai.activity.ZhaobiaoActivity"/>
+        <activity android:name="com.yitai.activity.FenGongSiActivity"/>
+        <activity android:name="com.yitai.activity.ZongBuActivity"/>
         <activity
                 android:name=".PlayActivity"
                 android:theme="@android:style/Theme.NoTitleBar.Fullscreen"

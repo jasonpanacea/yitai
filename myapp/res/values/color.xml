@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
+    <color name="text_tab_selected">#496F85</color>
+    <color name="text_tab_unselected">#808080</color>
     <color name="intro">#00AA8D</color><!--透明 -->
     <color name="culture">#2494B1</color><!--透明 -->
     <color name="news">#644F8E</color><!--透明 -->
