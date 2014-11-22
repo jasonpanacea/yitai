@@ -11,7 +11,7 @@
             android:layout_height="190dp"
             android:id="@+id/logo"
             android:layout_marginTop="10dp"
-            android:src="@drawable/logo_mainstage"
+            android:src="@drawable/logo"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             />
@@ -186,7 +186,7 @@
                 android:layout_below="@id/contact"
                 android:layout_alignLeft="@id/contact"
                 android:gravity="center"
-                android:textColor="#2B55B7"
+                android:textColor="@color/contact"
                 android:layout_marginTop="5dp"
                 android:text="联系方式"/>
     </RelativeLayout>

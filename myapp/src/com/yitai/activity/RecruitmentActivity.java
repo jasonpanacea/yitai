@@ -3,6 +3,7 @@ package com.yitai.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.*;
@@ -21,9 +22,8 @@ public class RecruitmentActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.tender);
+        setContentView(R.layout.product);
         ImageView imageView = (ImageView) findViewById(R.id.bg);
         imageView.setBackgroundResource(R.drawable.recruitment_pic);
         RelativeLayout header_layout = (RelativeLayout) findViewById(R.id.header_layout);

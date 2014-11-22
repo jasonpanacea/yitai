@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.*;
 import com.yitai.DO.CommonListItem;
 import com.yitai.DO.ContactItem;
@@ -17,7 +20,7 @@ import java.util.ArrayList;
  * Created by FanJiaqi on 2014/8/9.
  */
 public class TenderActivity extends Activity {
-    private ListView tendertList;
+	private WebView webView;
 
 
     @Override
@@ -25,16 +28,25 @@ public class TenderActivity extends Activity {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.tender);
-        tendertList = (ListView) findViewById(R.id.list);
-        ArrayList<CommonListItem> commonListItems = DataFactory.getCommonListData();
-        CommonListAdapter commonListAdapter = new CommonListAdapter(commonListItems, TenderActivity.this, true);
-        tendertList.setAdapter(commonListAdapter);
+        webView = (WebView) findViewById(R.id.webView);
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        webSettings.setDefaultTextEncodingName("utf-8");
+        webSettings.setAllowFileAccess(true);
+        webSettings.setPluginState(WebSettings.PluginState.ON);
+        
+        webView.requestFocus();
+        webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+        webView.getSettings().setLoadWithOverviewMode(true);
+        webView.loadUrl("file:///android_asset/www/zhaobiao.html");
 
-        tendertList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        webView.setWebViewClient(new WebViewClient() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                startActivity(new Intent(TenderActivity.this, ZhaobiaoActivity.class));
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                view.loadUrl(url);
+                return true;
             }
+
         });
     }
 }

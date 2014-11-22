@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 禁止edittext自动获取焦点 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/product" >
+
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="产品中心"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" >
+        </TextView>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/header_layout"
+        android:background="@drawable/product_pic" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/bg"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/shape_line"
+        android:dividerHeight="4dp"
+        android:headerDividersEnabled="false" />
+
+    <Button
+        android:id="@+id/link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bg"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:background="@color/transparent"
+        android:drawableTop="@drawable/recruitment_link_icon"
+        android:text="点击查看更多"
+        android:textColor="#FED1C2" />
+
+</RelativeLayout>

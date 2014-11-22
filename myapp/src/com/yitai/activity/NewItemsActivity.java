@@ -23,13 +23,11 @@ public class NewItemsActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.tender);
+        setContentView(R.layout.company_news);
         ImageView imageView = (ImageView) findViewById(R.id.bg);
-        imageView.setBackgroundResource(R.drawable.news_pic);
+
         RelativeLayout header_layout = (RelativeLayout) findViewById(R.id.header_layout);
-        header_layout.setBackgroundColor(getResources().getColor(R.color.news));
-        TextView header_text = (TextView) findViewById(R.id.header_text);
-        header_text.setText("公司新闻");
+
         recruittList = (ListView) findViewById(R.id.list);
 
 

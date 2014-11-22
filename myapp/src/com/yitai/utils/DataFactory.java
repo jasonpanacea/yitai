@@ -57,7 +57,7 @@ public class DataFactory {
     public static ArrayList<CommonListItem> getProductData(){
         ArrayList<CommonListItem> commonListItems = new ArrayList<CommonListItem>();
         StringBuilder sb = new StringBuilder();
-        CommonListItem commonListItem = new CommonListItem("煤炭",Constants.TITLE);
+        CommonListItem commonListItem = new CommonListItem("煤炭",Constants.COAL);
         commonListItems.add(commonListItem);
         sb.append("收到基地位发热量：>= 5500 (千卡/千克)"+"\n");
         sb.append("收到基全硫：< 0.6%"+"\n");
@@ -86,7 +86,7 @@ public class DataFactory {
         commonListItem = new CommonListItem("伊泰7号",sb.toString(),Constants.CONTENT);
         commonListItems.add(commonListItem);
 
-        commonListItem = new CommonListItem("煤制油",Constants.TITLE);
+        commonListItem = new CommonListItem("煤制油",Constants.PARAFFIN);
         commonListItems.add(commonListItem);
         commonListItem = new CommonListItem("F-T合成柴油","产品标准编号：Q/NMYT01-2009",Constants.CONTENT);
         commonListItems.add(commonListItem);
