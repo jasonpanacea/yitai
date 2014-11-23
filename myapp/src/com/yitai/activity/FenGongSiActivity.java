@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import com.yitai.DO.ContactItem;
@@ -30,14 +31,37 @@ public class FenGongSiActivity extends Activity {
         ArrayList<ContactItem> contactItems = DataFactory.getContactData();
         ContactAdapter ca = new ContactAdapter(this,contactItems);
         contactList.setAdapter(ca);
+        setListViewHeightBasedOnChildren(contactList);
+    }
+
+    public static void setListViewHeightBasedOnChildren(ListView listView) {
+        ListAdapter listAdapter = listView.getAdapter();
+        if (listAdapter == null) {
+            // pre-condition
+            return;
+        }
+
+        int totalHeight = listView.getPaddingTop() + listView.getPaddingBottom();
+        for (int i = 0; i < listAdapter.getCount(); i++) {
+            View listItem = listAdapter.getView(i, null, listView);
+            if (listItem instanceof ViewGroup) {
+                listItem.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+            }
+            listItem.measure(0, 0);
+            totalHeight += listItem.getMeasuredHeight();
+        }
+
+        ViewGroup.LayoutParams params = listView.getLayoutParams();
+        params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
+        listView.setLayoutParams(params);
     }
 
 
     private class ContactViewHolder{
+        TextView title;
         TextView name;
-        TextView addr_text;
-        TextView mailcode_text;
-        TextView tele_text;
+        TextView cell;
+        TextView tele;
     }
 
 
@@ -88,9 +112,9 @@ public class FenGongSiActivity extends Activity {
                     view = LayoutInflater.from(context).inflate(
                             R.layout.contact_content, null);
                     mContactViewHolder.name = (TextView) view.findViewById(R.id.name);
-                    mContactViewHolder.addr_text = (TextView) view.findViewById(R.id.addr_text);
-                    mContactViewHolder.tele_text = (TextView) view.findViewById(R.id.tele_text);
-                    mContactViewHolder.mailcode_text = (TextView) view.findViewById(R.id.mailcode_text);
+                    mContactViewHolder.tele = (TextView) view.findViewById(R.id.tele);
+                    mContactViewHolder.cell = (TextView) view.findViewById(R.id.cell);
+                    mContactViewHolder.title = (TextView) view.findViewById(R.id.title);
                     view.setTag(mContactViewHolder);
                 }
                 else{
@@ -110,10 +134,14 @@ public class FenGongSiActivity extends Activity {
             }
 
             if (type == Constants.CONTENT) {
+                mContactViewHolder.title.setText(contactItem.getTitle());
                 mContactViewHolder.name.setText(contactItem.getName());
-                mContactViewHolder.tele_text.setText(contactItem.getTele());
-                mContactViewHolder.addr_text.setText(contactItem.getAddr());
-                mContactViewHolder.mailcode_text.setText(contactItem.getMailcode());
+                if (contactItem.getTele() == "")
+                    mContactViewHolder.tele.setVisibility(View.GONE);
+                if (contactItem.getCell() == "")
+                    mContactViewHolder.cell.setVisibility(View.GONE);
+                mContactViewHolder.tele.setText(contactItem.getTele());
+                mContactViewHolder.cell.setText(contactItem.getCell());
             }
             else{
                 mTitleViewHolder.title.setText(contactItem.getTitle());
@@ -130,7 +158,7 @@ public class FenGongSiActivity extends Activity {
 
         @Override
         public boolean isEnabled(int position) {
-            return contactItems.get(position).getTag()==Constants.CONTENT;
+            return false;
         }
     }
 }

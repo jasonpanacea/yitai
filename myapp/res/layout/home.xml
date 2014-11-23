@@ -47,7 +47,7 @@
                 android:gravity="center"
                 android:layout_marginTop="5dp"
                 android:textColor="#00AA8D"
-                android:text="集团介绍"/>
+                android:text="公司介绍"/>
 
         <Button
                 android:id="@+id/culture"

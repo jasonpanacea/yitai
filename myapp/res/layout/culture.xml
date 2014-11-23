@@ -1,48 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 禁止edittext自动获取焦点 -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:focusable="true"
-    android:focusableInTouchMode="true" >
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
 
     <RelativeLayout
-        android:id="@+id/header_layout"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/culture" >
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/culture">
 
         <TextView
-            android:id="@+id/header_text"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:gravity="center"
-            android:text="企业文化"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" >
+                android:id="@+id/header_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="企业文化"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold">
         </TextView>
     </RelativeLayout>
 
     <ImageView
-        android:id="@+id/bg"
-        android:layout_width="fill_parent"
-        android:layout_height="200dp"
-        android:scaleType="fitXY"
-        android:layout_below="@+id/header_layout"
-        android:src="@drawable/culture" />
+            android:id="@+id/bg"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:layout_below="@+id/header_layout"
+            android:src="@drawable/culture"/>
+
+    <ScrollView
+            android:layout_below="@id/bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/rds"
+                  android:background="@color/culturebg"
+                  android:orientation="vertical">
+
+        <RadioGroup
+                android:id="@+id/orderBy1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@android:color/transparent"
+                    android:text="理念综述"
+                    android:textColor="@color/color_radiobutton"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/culture1"
+                    android:id="@+id/rb1">
+
+            </RadioButton>
+
+
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@android:color/transparent"
+                    android:text="精神要素"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/color_radiobutton"
+                    android:drawableTop="@drawable/culture2"
+                    android:checked="false"
+                    android:id="@+id/rb2">
+
+            </RadioButton>
+
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:text="行为要素"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/color_radiobutton"
+                    android:drawableTop="@drawable/culture3"
+                    android:checked="false"
+                    android:id="@+id/rb3">
+            </RadioButton>
+
+        </RadioGroup>
+
+        <RadioGroup
+                android:id="@+id/orderBy2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+            <RadioButton
+                    android:background="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableTop="@drawable/culture4"
+                    android:gravity="center"
+                    android:text="环境要素"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_radiobutton"
+                    android:checked="false"
+                    android:id="@+id/rb4"/>
+
+
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:text="八字箴言"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/color_radiobutton"
+                    android:drawableTop="@drawable/culture5"
+                    android:checked="false"
+                    android:id="@+id/rb5">
+
+            </RadioButton>
+
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:text="大事记录"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/color_radiobutton"
+                    android:drawableTop="@drawable/culture6"
+                    android:checked="false"
+                    android:id="@+id/rb6">
+            </RadioButton>
+
+        </RadioGroup>
+    </LinearLayout>
+
+
 
     <WebView
-        android:id="@+id/webView"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@+id/bg"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:background="@drawable/corner" />
+            android:id="@+id/webView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/rds"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/corner"/>
 
-    
-
+</RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

@@ -3,88 +3,57 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+    <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/name"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="50dp"
+            android:text="席向军"
+            />
+
 <TextView
-        android:id="@+id/name"
+        android:id="@+id/title"
+        android:layout_below="@id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/title"
+        android:layout_alignLeft="@id/name"
         android:layout_marginTop="5dp"
-        android:text="伊泰集团有限公司"
+        android:text="煤炭运销事业部经理"
         />
     
     <TextView
-            android:layout_below="@id/name"
+            android:layout_below="@id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
+            android:autoLink="phone"
             android:layout_marginTop="5dp"
-            android:id="@+id/addr"
-            android:textColor="@color/black"
-            android:text="公司地址："
-            />
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/addr_text"
-            android:layout_toRightOf="@id/addr"
-            android:textSize="18sp"
-            android:ellipsize="none"
-            android:maxLines="10"
-            android:scrollHorizontally="false"
-            android:textColor="@color/black"
-            android:layout_alignTop="@id/addr"
-            android:text="内蒙古鄂尔多斯市东胜区天骄北路伊泰大厦"/>
-
-    <TextView
-            android:layout_below="@id/addr_text"
-            android:layout_alignLeft="@id/addr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:id="@+id/mailcode"
-            android:layout_marginTop="5dp"
-            android:textColor="@color/black"
-            android:text="邮政编码："
-            />
-
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/mailcode_text"
-            android:layout_toRightOf="@id/mailcode"
-            android:textSize="18sp"
-            android:ellipsize="none"
-            android:maxLines="10"
-            android:scrollHorizontally="false"
-            android:layout_alignTop="@id/mailcode"
-            android:textColor="@color/black"
-            android:text="017000"/>
-
-    <TextView
-            android:layout_below="@id/mailcode_text"
-            android:layout_alignLeft="@id/addr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:textSize="18sp"
+            android:layout_alignLeft="@id/name"
             android:id="@+id/tele"
-            android:textColor="@color/black"
-            android:text="联系电话："
+            android:drawableLeft="@drawable/tele"
+            android:drawablePadding="8dip"
+            android:text="18947778989"
             />
 
     <TextView
-            android:layout_width="match_parent"
+            android:layout_below="@id/tele"
+            android:layout_alignLeft="@id/tele"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tele_text"
-            android:layout_toRightOf="@id/tele"
+            android:layout_marginTop="5dp"
             android:textSize="18sp"
-            android:ellipsize="none"
-            android:maxLines="10"
-            android:scrollHorizontally="false"
-            android:textColor="@color/black"
-            android:layout_alignTop="@id/tele"
-            android:layout_marginBottom="10dp"
-            android:text="+86-477-8565688"/>
+            android:id="@+id/cell"
+            android:autoLink="phone"
+            android:drawablePadding="8dip"
+            android:drawableLeft="@drawable/cell"
+            android:text="0477-8565883"
+            />
+
 </RelativeLayout>

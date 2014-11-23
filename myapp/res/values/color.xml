@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
+    <color name="textcolor">#5a5d82</color>
+    <color name="textbg">#eeeeee</color>
+    <color name="name">#404b5a</color>
+    <color name="title">#5d697b</color>
+    <color name="color_text_selected">#2494B1</color>
+    <color name="color_text_normal">#456373</color>
     <color name="text_tab_selected">#496F85</color>
     <color name="text_tab_unselected">#808080</color>
+    <color name="culturebg">#253749</color>
     <color name="intro">#00AA8D</color><!--透明 -->
     <color name="culture">#2494B1</color><!--透明 -->
     <color name="news">#644F8E</color><!--透明 -->

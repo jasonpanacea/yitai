@@ -42,10 +42,10 @@ public class ContactActivity extends ActivityGroup {
                 .setContent(new Intent(this, FenGongSiActivity.class)));
         TextView x = (TextView) tabHost.getTabWidget().getChildAt(0).findViewById(android.R.id.title);
         x.setTextColor(this.getResources().getColorStateList(R.color.text_tab_indicator));
-        x.setTextSize(25);
+        x.setTextSize(20);
         x = (TextView) tabHost.getTabWidget().getChildAt(1).findViewById(android.R.id.title);
         x.setTextColor(this.getResources().getColorStateList(R.color.text_tab_indicator));
-        x.setTextSize(25);
+        x.setTextSize(20);
 
 
     }
