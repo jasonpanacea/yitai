@@ -41,6 +41,7 @@ public class LauncherActivity extends Activity {
             public void onAnimationEnd(Animation animation) {
                 Intent it = new Intent(LauncherActivity.this, HomeActivity.class);
                 startActivity(it);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 LauncherActivity.this.finish();
             }
 

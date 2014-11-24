@@ -4,7 +4,8 @@
           android:versionCode="1"
           android:versionName="1.0">
 
-    <uses-sdk android:minSdkVersion="11"/>
+    <uses-sdk android:minSdkVersion="11"
+        android:targetSdkVersion="14"/>
     <application        	
             android:label="@string/app_name"
             android:icon="@drawable/icon"
@@ -22,7 +23,9 @@
         <activity android:name="com.yitai.activity.IntroActivity"/>
         <activity android:name="com.yitai.activity.ContactActivity"/>
         <activity android:name="com.yitai.activity.TenderActivity"/>
-        <activity android:name="com.yitai.activity.NewsActivity"/>
+        <activity android:name="com.yitai.activity.NewsActivity"
+            android:hardwareAccelerated="true" 
+            />
         <activity android:name="com.yitai.activity.ProductActivity"/>
         <activity android:name=".NewItemsActivity"/>
         <activity android:name="com.yitai.activity.RecruitmentActivity"/>

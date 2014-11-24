@@ -25,9 +25,16 @@
         </TextView>
 
     </RelativeLayout>
+    
+        <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_layout" />
 
-    <com.yitai.view.ProgressWebView
-            android:layout_below="@id/header_layout"
+    <WebView
+            android:layout_below="@id/progressBar"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_marginTop="10dp"

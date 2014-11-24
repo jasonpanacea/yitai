@@ -1,5 +1,7 @@
 package com.yitai.activity;
 
+import java.lang.reflect.InvocationTargetException;
+
 import android.content.Intent;
 import android.webkit.WebChromeClient;
 import com.yitai.activity.R;
@@ -11,6 +13,7 @@ import android.view.Window;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.yitai.view.ProgressWebView;
 
@@ -20,6 +23,7 @@ import com.yitai.view.ProgressWebView;
 public class NewsActivity extends Activity {
 
     private WebView webView;
+	private ProgressBar progress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +32,10 @@ public class NewsActivity extends Activity {
         this.setContentView(R.layout.news);
         Intent intent = getIntent();
         String url = intent.getStringExtra("url");
-        TextView titleView = (TextView) findViewById(R.id.header_text);
-        titleView.setText("公司新闻");
+    	progress = (ProgressBar) findViewById(R.id.progressBar);
+		progress.setMax(100);
         
-        webView = (ProgressWebView) findViewById(R.id.webView);
+        webView = (WebView) findViewById(R.id.webView);
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDefaultTextEncodingName("utf-8");
@@ -54,5 +58,73 @@ public class NewsActivity extends Activity {
             }
 
         });
+        
+        webView.setWebChromeClient(new WebChromeClient(){
+
+			@Override
+			public void onProgressChanged(WebView view, int newProgress) {
+				// TODO Auto-generated method stub
+	            if (newProgress == 100) {
+	            	progress.setVisibility(View.GONE);
+	            } else {
+	                if (progress.getVisibility() == View.GONE)
+	                	progress.setVisibility(View.VISIBLE);
+	                progress.setProgress(newProgress);
+	            }
+				super.onProgressChanged(view, newProgress);
+			}
+			
+        	
+        }); 
     }
+    
+    public void setValue(int progress) {
+		this.progress.setProgress(progress);		
+	}
+    
+    @Override  
+    public void onPause() {// 继承自Activity  
+        super.onPause();  
+        try {
+			webView.getClass().getMethod("onPause").invoke(webView,(Object[])null);
+		} catch (IllegalArgumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InvocationTargetException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchMethodException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }  
+      
+    @Override  
+    public void onResume() {// 继承自Activity  
+        super.onResume();  
+        try {
+			webView.getClass().getMethod("onResume").invoke(webView,(Object[])null);
+		} catch (IllegalArgumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InvocationTargetException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchMethodException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }  
 }
