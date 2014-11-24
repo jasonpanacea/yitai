@@ -62,15 +62,17 @@
     
     <Button
         android:id="@+id/link"
-        android:text="点击查看更多"
+        android:text="访问伊泰官网，浏览更多实时新闻"
+        android:singleLine="true"
         android:background="@color/transparent"
         android:textColor="#FED1C2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/bg"
         android:layout_marginBottom="20dp"
-        android:layout_alignParentRight="true"
-        android:drawableTop="@drawable/news_link_icon" 
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:drawableLeft="@drawable/news_link_icon"
 />
 
 </RelativeLayout>

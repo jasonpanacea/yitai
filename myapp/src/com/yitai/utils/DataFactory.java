@@ -173,4 +173,16 @@ public class DataFactory {
         commonListItems.add(commonListItem);
         return commonListItems;
     }
+
+    public static ArrayList<CommonListItem> getNewsListData2(){
+        ArrayList<CommonListItem> commonListItems = new ArrayList<CommonListItem>();
+        CommonListItem commonListItem = new CommonListItem("成都伊泰天骄项目亚洲人居环境颁奖和产品全球发布会圆满成功","6月6日，成都伊泰天骄项目亚洲人居环境颁奖和产品全球发布会在成都香格里拉大酒店隆重举行。");
+        commonListItems.add(commonListItem);
+        commonListItem = new CommonListItem("《看伊泰 》第十六期 (1)","26:32");
+        commonListItems.add(commonListItem);
+        commonListItem = new CommonListItem("《看伊泰 》第十六期 (2)","26:43");
+        commonListItems.add(commonListItem);
+
+        return commonListItems;
+    }
 }

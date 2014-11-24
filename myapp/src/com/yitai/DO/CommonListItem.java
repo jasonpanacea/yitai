@@ -14,6 +14,11 @@ public class CommonListItem {
         this.tag = tag;
     }
 
+    public CommonListItem(String title, String subtitle) {
+        this.title = title;
+        this.subtitle = subtitle;
+    }
+
     public CommonListItem(String title, int tag) {
         this.title = title;
         this.tag = tag;

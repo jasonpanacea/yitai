@@ -50,11 +50,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/bg"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
         android:layout_marginBottom="20dp"
         android:background="@color/transparent"
-        android:drawableTop="@drawable/recruitment_link_icon"
-        android:text="点击查看更多"
+        android:drawableLeft="@drawable/recruitment_link_icon"
+        android:text="访问伊泰官网，浏览更多实时招聘信息"
+        android:layout_marginLeft="5dp"
+        android:singleLine="true"
         android:textColor="#FED1C2" />
 
 </RelativeLayout>

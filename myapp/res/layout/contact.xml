@@ -40,18 +40,6 @@
             android:layout_below="@id/header_layout"
             android:background="@drawable/contact_pic"/>
 
-    
-        <Button
-            android:id="@+id/link"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/bg"
-            android:layout_alignParentRight="true"
-            android:layout_marginBottom="20dp"
-            android:background="@color/transparent"
-            android:drawableTop="@drawable/recruitment_link_icon"
-            android:text="点击查看更多"
-            android:textColor="#FED1C2" />
 
     <TabHost
             android:layout_width="fill_parent"
