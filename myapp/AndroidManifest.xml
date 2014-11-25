@@ -19,7 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="com.yitai.activity.HomeActivity"/>
+        <activity android:name="com.yitai.activity.HomeActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar"/>
         <activity android:name="com.yitai.activity.IntroActivity"/>
         <activity android:name="com.yitai.activity.ContactActivity"/>
         <activity android:name="com.yitai.activity.TenderActivity"/>

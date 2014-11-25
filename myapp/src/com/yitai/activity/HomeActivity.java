@@ -5,13 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ScrollView;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import com.yitai.activity.R;
+import com.easyandroidanimations.library.Animation;
+import com.easyandroidanimations.library.SlideInAnimation;
 
 /**
  * Created by FanJiaqi on 2014/8/4.
@@ -25,6 +24,8 @@ public class HomeActivity extends Activity implements View.OnClickListener {
     private Button product;
     private Button recruit;
     private Button contact;
+    private ScrollView scroll;
+    private ImageView logo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +42,11 @@ public class HomeActivity extends Activity implements View.OnClickListener {
         product = (Button) findViewById(R.id.product);
         recruit = (Button) findViewById(R.id.recruit);
         contact = (Button) findViewById(R.id.contact);
-
+        logo = (ImageView) findViewById(R.id.logo);
+        scroll = (ScrollView) findViewById(R.id.scroll);
+		new SlideInAnimation(logo).setDirection(Animation.DIRECTION_LEFT).setDuration(Animation.DURATION_LONG)
+		.animate();
+//        scroll.setVisibility(View.INVISIBLE);
         intro.setOnClickListener(this);
         culture.setOnClickListener(this);
         news.setOnClickListener(this);
