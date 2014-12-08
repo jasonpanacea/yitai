@@ -40,19 +40,65 @@
             android:layout_below="@id/header_layout"
             android:background="@drawable/tenders_pic"/>
 
+    <TextView
+        android:id="@+id/name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:autoLink="all"
+        android:text="@string/name1" />
 
+    <TextView
+        android:id="@+id/link1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name1"
+        android:textSize="20sp"
+        android:layout_below="@+id/name1"
+        android:layout_marginTop="5dp"
+        android:autoLink="all"
+        android:text="@string/link1" />
+    
+    
+    <TextView
+        android:id="@+id/name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@+id/link1"
+        android:layout_alignLeft="@+id/name1"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:autoLink="all"
+        android:text="@string/name2" />
+    
+    <TextView
+        android:id="@+id/link2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name1"
+        android:textSize="20sp"
+        android:layout_below="@+id/name2"
+        android:layout_marginTop="5dp"
+        android:autoLink="all"
+        android:text="@string/link2" />
 
-
-
-    <WebView
-            android:layout_below="@id/bg"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/corner"
-            android:id="@+id/webView"
-            />
+    <TextView
+        android:id="@+id/textView3"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/bg"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/hint" />
 
 </RelativeLayout>

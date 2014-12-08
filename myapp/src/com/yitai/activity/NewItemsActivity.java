@@ -60,7 +60,7 @@ public class NewItemsActivity extends Activity {
                     case 1:
                     case 2:
                         intent = new Intent(NewItemsActivity.this, NewsActivity.class);
-                        intent.putExtra("url","http://v.youku.com/v_show/id_XODI4OTg5NTky.html?from=y1.2-1-91.3.2-1.1-1-1-1");
+                        intent.putExtra("url","http://v.youku.com/v_show/id_XODM0MTI0MDgw.html");
                         break;
                 }
                 startActivity(intent);

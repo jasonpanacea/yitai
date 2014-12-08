@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">伊泰集团</string>
+    <string name="hint">请通过下属网站浏览伊泰集团招标信息</string>
+    <string name="name1">伊泰集团物资管理综合平台</string>
+    <string name="name2">委托公开招标代理机构：内蒙古自治区机械设备成套有限责任公司</string>
+    <string name="link1">http://cz.yitaigroup.com</string>
+	<string name="link2">http://www.nmgct.net</string>
 </resources>
